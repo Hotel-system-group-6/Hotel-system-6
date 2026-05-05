@@ -24,7 +24,6 @@ Diseñar e implementar la base de datos relacional de un sistema hotelero usando
 | Herramienta | Uso |
 |---|---|
 | GitHub | Repositorio del proyecto con ramas main, qa y develop |
-| Azure | Gestión de entornos e infraestructura en la nube |
 | Trello | Tablero de gestión de tareas y seguimiento del sprint |
 | PostgreSQL | Motor de base de datos relacional del sistema |
 | draw.io / dbdiagram | Diseño del modelo entidad-relación (MER) |
