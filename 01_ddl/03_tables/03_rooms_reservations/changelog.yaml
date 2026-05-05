@@ -1,0 +1,207 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4d21842f-6c11-4854-8de6-b8f870cadc79
+      author: daniel2004-lsd
+      labels: "ddl,tables,postgresql,03_rooms_reservations"
+      comment: Creates table day_type.
+      changes:
+        - sqlFile:
+            path: 001-day_type.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_rooms_reservations/001-day_type.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+  - changeSet:
+      id: 69f7389a-ae66-44cb-97fa-23a40ad31405
+      author: daniel2004-lsd
+      labels: "ddl,tables,postgresql,03_rooms_reservations"
+      comment: Creates table room_type.
+      changes:
+        - sqlFile:
+            path: 002-room_type.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_rooms_reservations/002-room_type.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+  - changeSet:
+      id: dc367df4-7c9f-4521-b0c6-ad71b808cb4e
+      author: daniel2004-lsd
+      labels: "ddl,tables,postgresql,03_rooms_reservations"
+      comment: Creates table room_status.
+      changes:
+        - sqlFile:
+            path: 003-room_status.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_rooms_reservations/003-room_status.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+  - changeSet:
+      id: 8a1e0e61-a3cd-4acf-8746-4dc3277a6a2e
+      author: daniel2004-lsd
+      labels: "ddl,tables,postgresql,03_rooms_reservations"
+      comment: Creates table room.
+      changes:
+        - sqlFile:
+            path: 004-room.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_rooms_reservations/004-room.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+  - changeSet:
+      id: ef3e277b-3815-4a15-9667-853fca7962d0
+      author: daniel2004-lsd
+      labels: "ddl,tables,postgresql,03_rooms_reservations"
+      comment: Creates table price.
+      changes:
+        - sqlFile:
+            path: 005-price.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_rooms_reservations/005-price.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+  - changeSet:
+      id: 815c5073-6801-43fd-925f-edaa14a3b7f2
+      author: daniel2004-lsd
+      labels: "ddl,tables,postgresql,03_rooms_reservations"
+      comment: Creates table room_reservation.
+      changes:
+        - sqlFile:
+            path: 006-room_reservation.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_rooms_reservations/006-room_reservation.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+  - changeSet:
+      id: 58fdc252-3bda-4bbd-93e2-424c33af6ef0
+      author: daniel2004-lsd
+      labels: "ddl,tables,postgresql,03_rooms_reservations"
+      comment: Creates table room_cancellation.
+      changes:
+        - sqlFile:
+            path: 007-room_cancellation.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_rooms_reservations/007-room_cancellation.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+  - changeSet:
+      id: 14a34ef1-e760-426a-9a7f-510c29c89651
+      author: daniel2004-lsd
+      labels: "ddl,tables,postgresql,03_rooms_reservations"
+      comment: Creates table room_availability.
+      changes:
+        - sqlFile:
+            path: 008-room_availability.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_rooms_reservations/008-room_availability.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+  - changeSet:
+      id: 51985e69-63f6-441c-afba-c3068945f617
+      author: daniel2004-lsd
+      labels: "ddl,tables,postgresql,03_rooms_reservations"
+      comment: Creates table room_catalog.
+      changes:
+        - sqlFile:
+            path: 009-room_catalog.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_rooms_reservations/009-room_catalog.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+  - changeSet:
+      id: 58379b4a-d005-4a99-afc2-3fca57551046
+      author: daniel2004-lsd
+      labels: "ddl,tables,postgresql,03_rooms_reservations"
+      comment: Creates table stay.
+      changes:
+        - sqlFile:
+            path: 010-stay.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_rooms_reservations/010-stay.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+  - changeSet:
+      id: 2b8122cd-0441-481c-95a2-a439a78bbdc6
+      author: daniel2004-lsd
+      labels: "ddl,tables,postgresql,03_rooms_reservations"
+      comment: Creates table check_in.
+      changes:
+        - sqlFile:
+            path: 011-check_in.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_rooms_reservations/011-check_in.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+  - changeSet:
+      id: c0b6f115-87bf-41df-b9b4-e918c3bbcd7a
+      author: daniel2004-lsd
+      labels: "ddl,tables,postgresql,03_rooms_reservations"
+      comment: Creates table check_out.
+      changes:
+        - sqlFile:
+            path: 012-check_out.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_rooms_reservations/012-check_out.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+

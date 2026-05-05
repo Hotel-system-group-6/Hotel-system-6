@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-set-updated-at-function
+      author: codex
+      labels: "ddl,functions,postgresql,hotel-system"
+      comment: Creates a trigger function to preserve MySQL ON UPDATE CURRENT_TIMESTAMP behavior.
+      changes:
+        - sqlFile:
+            path: 001_set_updated_at.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/06_functions/001_set_updated_at.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false

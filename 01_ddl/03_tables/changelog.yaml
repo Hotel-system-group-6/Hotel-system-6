@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - include:
+      file: 01_identity_security/changelog.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 02_company_operations/changelog.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 03_rooms_reservations/changelog.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 04_inventory_services/changelog.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 05_billing_payments/changelog.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 06_communication_loyalty/changelog.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 07_maintenance/changelog.yaml
+      relativeToChangelogFile: true
+
