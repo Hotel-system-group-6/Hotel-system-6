@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS module_screen CASCADE;
+

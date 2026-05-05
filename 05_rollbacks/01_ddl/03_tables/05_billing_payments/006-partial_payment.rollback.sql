@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS partial_payment CASCADE;
+

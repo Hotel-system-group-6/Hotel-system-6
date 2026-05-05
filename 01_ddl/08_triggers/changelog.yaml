@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-updated-at-triggers
+      author: codex
+      labels: "ddl,triggers,postgresql,hotel-system"
+      comment: Adds updated_at triggers for tables converted from MySQL ON UPDATE CURRENT_TIMESTAMP.
+      changes:
+        - sqlFile:
+            path: 001_updated_at_triggers.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/08_triggers/001_updated_at_triggers.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
