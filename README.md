@@ -13,6 +13,7 @@ El motor objetivo actual es PostgreSQL 16, gestionado con Liquibase y Docker Com
 - `docs/backlog_tecnico.md`
 - `docs/seguimientos.md`
 - `adr/001-migracion-mysql-a-postgresql.md`
+- `adr/002-uso-de-schemas-por-dominio.md`
 
 ## Validacion
 

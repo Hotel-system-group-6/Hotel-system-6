@@ -32,3 +32,5 @@ Este plan define los datos minimos necesarios para validar el esquema PostgreSQL
 ## Validaciones
 
 El smoke test debe validar conteo de tablas, columnas de auditoria, datos base, joins principales de habitaciones y relaciones basicas de facturacion.
+
+Los scripts de datos y smoke tests deben usar nombres calificados con schema cuando consulten tablas, por ejemplo `identity_security.customer`, `rooms_reservations.room` y `billing_payments.invoice`.
