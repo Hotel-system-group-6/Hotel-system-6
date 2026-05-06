@@ -34,15 +34,18 @@ La documentacion del proyecto puede mantenerse en espanol. Los scripts SQL deben
 
 ## Esquema base
 
-El esquema migrado contiene 46 tablas agrupadas por dominios:
+El esquema migrado contiene 46 tablas organizadas en 8 modulos funcionales:
 
-- Identidad y seguridad.
-- Operacion de empresa.
-- Habitaciones y reservas.
-- Inventario y servicios.
-- Facturacion y pagos.
-- Comunicacion y fidelizacion.
+- Parametrizacion.
+- Distribucion.
+- Prestacion de servicio.
+- Facturacion.
+- Inventario.
+- Notificacion.
+- Seguridad.
 - Mantenimiento.
+
+En la implementacion fisica de PostgreSQL se crea un schema por cada modulo funcional para que el modelo coincida con el analisis aprobado.
 
 ## Consecuencias
 

@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: schemas-002-assign-tables-to-domain-schemas
-      author: codex
+      id: 77fdec64-2db8-42cb-9f92-05bfabc98f88
+      author: daniel2004-lsd
       labels: "ddl,schemas,postgresql,hotel-system"
       comment: Moves existing hotel system tables from public into their domain schemas.
       changes:

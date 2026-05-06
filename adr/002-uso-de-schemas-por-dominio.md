@@ -1,4 +1,4 @@
-# ADR-002: Uso de schemas por dominio en PostgreSQL
+# ADR-002: Uso de schemas por modulo funcional en PostgreSQL
 
 ## Estado
 
@@ -10,7 +10,7 @@ Aceptada
 
 ## Contexto
 
-El esquema del sistema hotelero contiene multiples dominios funcionales: identidad y seguridad, operacion de empresa, habitaciones y reservas, inventario y servicios, facturacion y pagos, comunicacion y fidelizacion, y mantenimiento.
+El esquema del sistema hotelero contiene 8 modulos funcionales: parametrizacion, distribucion, prestacion de servicio, facturacion, inventario, notificacion, seguridad y mantenimiento.
 
 Inicialmente las tablas se crean desde scripts organizados por carpetas de dominio. Sin embargo, si todas las tablas quedan en `public`, la base de datos pierde parte de esa separacion logica cuando se consulta directamente desde PostgreSQL.
 
@@ -18,14 +18,15 @@ Tambien existe una consideracion importante con Liquibase: si una base ya ejecut
 
 ## Decision
 
-Se usaran schemas PostgreSQL por dominio:
+Se usaran schemas PostgreSQL por modulo funcional:
 
-- `identity_security`
-- `company_operations`
-- `rooms_reservations`
-- `inventory_services`
-- `billing_payments`
-- `communication_loyalty`
+- `parameterization`
+- `distribution`
+- `service_delivery`
+- `billing`
+- `inventory`
+- `notification`
+- `security`
 - `maintenance`
 
 Los schemas se crean en `01_ddl/01_schemas`.
@@ -36,20 +37,20 @@ Las tablas se mueven desde `public` hacia su schema de dominio mediante un chang
 
 ### Positivas
 
-- El modelo queda separado por dominios reales dentro de PostgreSQL.
+- El modelo queda separado por modulos funcionales dentro de PostgreSQL.
 - Se habilita una futura estrategia de permisos por schema.
 - Las consultas y herramientas de administracion muestran una estructura mas clara.
 - Se evita editar changeSets de tablas que podrian estar registrados en una base existente.
 
 ### Negativas
 
-- Las consultas nuevas deben usar nombres calificados, por ejemplo `rooms_reservations.room`.
+- Las consultas nuevas deben usar nombres calificados, por ejemplo `distribution.room`, `service_delivery.room_reservation` o `billing.invoice`.
 - El `search_path` debe configurarse con cuidado si una aplicacion consulta sin schema.
 - Los datos semilla y smoke tests deben usar los schemas correctos.
 
 ## Criterios de aceptacion
 
-- Los 7 schemas de dominio existen.
+- Los 8 schemas funcionales existen.
 - Las 46 tablas quedan asignadas a su schema correspondiente.
 - Liquibase valida el changelog sin errores.
 - La documentacion explica el motivo de la separacion por schemas.
