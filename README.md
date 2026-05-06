@@ -2,9 +2,6 @@
   <img src="https://readme-typing-svg.herokuapp.com?color=1E90FF&size=50&center=true&vCenter=true&width=900&font=Audiowide&lines=SISTEMA+HOTELERO;HOTEL+MANAGEMENT+SYSTEM;Gestión+de+Hoteles+Moderna" />
 </p>
 
-
-# Contexto General del Proyecto — Sistema de Gestión Hotelera
-
 ## 1. Descripción del proyecto
 
 El proyecto consiste en el diseño, planificación y construcción de la base de datos de un sistema de gestión hotelera. El equipo trabaja bajo la metodología ágil Scrum, gestionando las tareas a través de Trello y documentando las decisiones técnicas en un repositorio de GitHub. La infraestructura y los entornos se gestionan con soporte en Azure.
