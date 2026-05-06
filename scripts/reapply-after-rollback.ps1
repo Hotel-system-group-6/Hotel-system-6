@@ -1,5 +1,5 @@
 param(
-    [string]$ProjectName = "shopping-cart-db",
+    [string]$ProjectName = "hotel_system",
     [switch]$OnlyNext,
     [switch]$AllPending,
     [switch]$AutoConfirm
