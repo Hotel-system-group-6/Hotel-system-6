@@ -58,21 +58,18 @@ La documentación del proyecto puede mantenerse en español. Los artefactos SQL 
 
 ## Esquema base
 
-El modelo contiene 46 tablas distribuidas en 7 schemas de dominio (ver ADR-002):
+El esquema migrado contiene 46 tablas organizadas en 8 modulos funcionales:
 
-| Schema | Módulo funcional |
-|---|---|
-| `identity_security` | Seguridad |
-| `company_operations` | Parametrización |
-| `rooms_reservations` | Distribución y Prestación de servicio |
-| `inventory_services` | Inventario |
-| `billing_payments` | Facturación |
-| `communication_loyalty` | Notificación |
-| `maintenance` | Mantenimiento |
+- Parametrizacion.
+- Distribucion.
+- Prestacion de servicio.
+- Facturacion.
+- Inventario.
+- Notificacion.
+- Seguridad.
+- Mantenimiento.
 
-Todas las tablas incluyen los campos comunes de identificación y auditoría definidos en el estándar del proyecto: `id` (UUID), `created_by`, `created_at`, `updated_by`, `updated_at`, `deleted_by`, `deleted_at`, `status`.
-
----
+En la implementacion fisica de PostgreSQL se crea un schema por cada modulo funcional para que el modelo coincida con el analisis aprobado.
 
 ## Consecuencias
 

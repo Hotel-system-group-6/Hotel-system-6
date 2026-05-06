@@ -1,4 +1,4 @@
-# ADR-002: Uso de schemas por dominio en PostgreSQL
+# ADR-002: Uso de schemas por modulo funcional en PostgreSQL
 
 ## Estado
 
@@ -40,9 +40,16 @@ Se utilizan **7 schemas de dominio** en PostgreSQL para organizar las 46 tablas 
 
 Los schemas se crean en `01_ddl/01_schemas/`.
 
-Las tablas se mueven desde `public` hacia su schema de dominio mediante changeSets nuevos en `01_ddl/10_schema_assignments/`. Esto evita reescribir los changeSets existentes de creación de tablas y elimina el riesgo de conflictos de checksum en bases con historial previo.
+Se usaran schemas PostgreSQL por modulo funcional:
 
----
+- `parameterization`
+- `distribution`
+- `service_delivery`
+- `billing`
+- `inventory`
+- `notification`
+- `security`
+- `maintenance`
 
 ## Convención de nombres calificados
 
@@ -60,32 +67,20 @@ El `search_path` de la aplicación debe configurarse explícitamente para inclui
 
 ### Positivas
 
-- El modelo queda separado por dominios reales dentro de PostgreSQL, reflejando la arquitectura funcional del sistema.
-- Se habilita una futura estrategia de permisos por schema (por ejemplo, un rol de base de datos solo con acceso a `billing_payments`).
-- Las herramientas de administración muestran una estructura más clara y navegable.
-- Se evita modificar changeSets de tablas que podrían estar registrados en bases con historial existente.
-- La separación por schemas complementa la organización de scripts por carpeta de dominio.
+- El modelo queda separado por modulos funcionales dentro de PostgreSQL.
+- Se habilita una futura estrategia de permisos por schema.
+- Las consultas y herramientas de administracion muestran una estructura mas clara.
+- Se evita editar changeSets de tablas que podrian estar registrados en una base existente.
 
 ### Negativas
 
-- Las consultas y referencias entre tablas de schemas distintos deben usar nombres calificados.
-- El `search_path` debe configurarse con cuidado en la aplicación y en las herramientas de administración.
-- Los datos semilla y smoke tests deben usar los schemas correctos en todas las referencias.
-- Las llaves foráneas entre tablas de schemas distintos son válidas en PostgreSQL pero requieren que ambos schemas estén accesibles en el contexto de la sesión.
-
----
-
-## Criterios de aceptación
-
-- Los 7 schemas de dominio existen en la base de datos.
-- Las 46 tablas están asignadas al schema correspondiente según la tabla de este ADR.
-- Liquibase valida el changelog completo sin errores.
-- Los smoke tests y datos semilla usan nombres calificados correctamente.
-- La documentación explica el motivo de la separación por schemas y la asignación de cada tabla.
-
----
+- Las consultas nuevas deben usar nombres calificados, por ejemplo `distribution.room`, `service_delivery.room_reservation` o `billing.invoice`.
+- El `search_path` debe configurarse con cuidado si una aplicacion consulta sin schema.
+- Los datos semilla y smoke tests deben usar los schemas correctos.
 
 ## Decisiones relacionadas
 
-- ADR-001: Migración a PostgreSQL como motor relacional del proyecto.
-- ADR-003: Adopción de UUID v4 como identificador universal de todas las tablas.
+- Los 8 schemas funcionales existen.
+- Las 46 tablas quedan asignadas a su schema correspondiente.
+- Liquibase valida el changelog sin errores.
+- La documentacion explica el motivo de la separacion por schemas.

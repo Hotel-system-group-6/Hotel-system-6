@@ -6,13 +6,13 @@ Este plan define los datos minimos necesarios para validar el esquema PostgreSQL
 
 ## Orden recomendado de carga
 
-1. Identidad y seguridad: `customer`, `person`, `app_role`, `permission`, `module`, `screen`, `app_user`.
-2. Operacion de empresa: `company`, `legal_information`, `employee`, `branch`.
-3. Habitaciones: `day_type`, `room_type`, `room_status`, `room`, `price`.
-4. Reservas y estadias: `room_reservation`, `room_availability`, `room_catalog`, `stay`, `check_in`, `check_out`.
-5. Inventario y servicios: `supplier`, `product`, `service`, `product_tracking`, `inventory_availability`.
-6. Facturacion y pagos: `product_sale`, `service_sale`, `pre_invoice`, `invoice`, `partial_payment`, `purchase_detail`.
-7. Comunicacion y fidelizacion: `promotion`, `alert`, `terms_condition`, `customer_loyalty`.
+1. Parametrizacion: `customer`, `price`, `company`, `legal_information`, `employee`, `day_type`, `payment_method`.
+2. Distribucion: `branch`, `room`, `room_type`, `room_status`.
+3. Prestacion de servicio: `room_reservation`, `room_cancellation`, `room_availability`, `room_catalog`, `check_in`, `check_out`, `stay`, `product_sale`, `service_sale`.
+4. Facturacion: `pre_invoice`, `partial_payment`, `invoice`, `purchase_detail`.
+5. Inventario: `product`, `service`, `supplier`, `product_tracking`, `inventory_availability`.
+6. Notificacion: `promotion`, `alert`, `terms_condition`, `customer_loyalty`.
+7. Seguridad: `person`, `app_user`, `app_role`, `permission`, `module`, `screen`, `app_user_role`, `role_permission`, `module_screen`.
 8. Mantenimiento: `room_maintenance`, `maintenance_usage`, `maintenance_remodeling`, `maintenance_dashboard`.
 
 ## Datos minimos para smoke test
@@ -33,4 +33,4 @@ Este plan define los datos minimos necesarios para validar el esquema PostgreSQL
 
 El smoke test debe validar conteo de tablas, columnas de auditoria, datos base, joins principales de habitaciones y relaciones basicas de facturacion.
 
-Los scripts de datos y smoke tests deben usar nombres calificados con schema cuando consulten tablas, por ejemplo `identity_security.customer`, `rooms_reservations.room` y `billing_payments.invoice`.
+Los scripts de datos y smoke tests deben usar nombres calificados con schema cuando consulten tablas, por ejemplo `parameterization.customer`, `distribution.room` y `billing.invoice`.

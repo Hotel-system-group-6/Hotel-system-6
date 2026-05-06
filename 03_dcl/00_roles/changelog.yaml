@@ -1,18 +1,18 @@
 databaseChangeLog:
   - changeSet:
-      id: 2579515e-31ed-4ccb-80c1-a8eb668fb943
+      id: e11ba212-2971-4cc6-8c52-533311d280d6
       author: daniel2004-lsd
-      labels: "dml,inserts,postgresql,seed"
-      comment: Inserts five sample records into each hotel system table.
+      labels: "dcl,roles,postgresql,hotel-system"
+      comment: Creates database permission roles and login users for the hotel system.
       changes:
         - sqlFile:
-            path: 001-seed-sample-data.sql
+            path: 001-create-role-instructor.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../05_rollbacks/02_dml/00_inserts/001-seed-sample-data.rollback.sql
+            path: ../../05_rollbacks/03_dcl/00_roles/001-create-role-instructor-rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
