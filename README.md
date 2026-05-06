@@ -6,7 +6,6 @@
 
 El proyecto consiste en el diseño, planificación y construcción de la base de datos de un sistema de gestión hotelera. El equipo trabaja bajo la metodología ágil Scrum, gestionando las tareas a través de Trello y documentando las decisiones técnicas en un repositorio de GitHub. La infraestructura y los entornos se gestionan con soporte en trellor.
 
-El objetivo principal del sprint (06-05 al 12-05) es entregar un repositorio funcional con la base de datos completamente estructurada, documentada y validada, lista para sustentar ante el equipo evaluador.
 
 ---
 
