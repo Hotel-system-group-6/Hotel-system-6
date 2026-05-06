@@ -30,12 +30,23 @@ El archivo monolitico fue reemplazado por archivos individuales bajo `01_ddl/03_
 - Constraints, indices y triggers: ingles.
 - Carpetas de dominio tecnico: ingles.
 
+## Estrategia de schemas
+
+Las tablas se organizan fisicamente en PostgreSQL usando schemas por dominio. Para proteger el historial de Liquibase, no se reescriben los changeSets de tablas existentes. En su lugar:
+
+1. `01_ddl/01_schemas` crea los schemas de dominio.
+2. `01_ddl/03_tables` crea las tablas.
+3. `01_ddl/10_schema_assignments` mueve las tablas desde `public` hacia su schema definitivo.
+
+Esto permite que una base fresca funcione correctamente y tambien evita checksums rotos si una base ya tenia changeSets de tablas registrados.
+
 ## Activos actuales
 
 - Tablas: `01_ddl/03_tables/<domain>/<sequence>-<table>.sql`
 - Rollbacks de tablas: `05_rollbacks/01_ddl/03_tables/<domain>/<sequence>-<table>.rollback.sql`
 - Funcion de auditoria: `01_ddl/06_functions/001_set_updated_at.sql`
 - Triggers de auditoria: `01_ddl/08_triggers/001_updated_at_triggers.sql`
+- Asignacion de tablas a schemas: `01_ddl/10_schema_assignments/001-assign-tables-to-domain-schemas.sql`
 - Changelog maestro: `changelog/db.changelog-master.yaml`
 
 ## Validacion

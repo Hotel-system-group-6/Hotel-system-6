@@ -34,3 +34,17 @@ El orden de los dominios es intencional. Primero se crean las tablas base y lueg
 El changelog principal de tablas es `01_ddl/03_tables/changelog.yaml`. Este archivo incluye un changelog por dominio. Cada changelog de dominio registra los scripts tabla por tabla y apunta a su rollback correspondiente en `05_rollbacks/01_ddl/03_tables`.
 
 Esta estructura permite cambios pequenos, ownership claro por dominio y rollbacks mas faciles de revisar.
+
+## Schemas PostgreSQL
+
+Ademas de la organizacion por carpetas, las tablas se asignan a schemas PostgreSQL por dominio:
+
+- `identity_security`
+- `company_operations`
+- `rooms_reservations`
+- `inventory_services`
+- `billing_payments`
+- `communication_loyalty`
+- `maintenance`
+
+Los schemas se crean en `01_ddl/01_schemas`. La asignacion de tablas a schemas se hace en `01_ddl/10_schema_assignments` para no modificar los changeSets de tablas que ya podrian estar registrados en una base de datos.

@@ -14,7 +14,9 @@ Migrar el esquema del sistema hotelero desde MySQL hacia PostgreSQL, manteniendo
 6. Registro de los scripts en Liquibase.
 7. Creacion de rollbacks por tabla.
 8. Creacion de funcion y triggers para mantener `updated_at`.
-9. Validacion offline de Liquibase.
+9. Creacion de schemas PostgreSQL por dominio.
+10. Asignacion de tablas a sus schemas sin reescribir changeSets existentes.
+11. Validacion offline de Liquibase.
 
 ## Siguiente trabajo
 
