@@ -46,6 +46,8 @@ Condiciones que debe cumplir una HU para considerarse completamente terminada.
 
 ## 7. Historias de usuario priorizadas
 
+Fase, es la etapa que se esta cumpliendo dentro del proceso
+
 ### Fase 1 — Planificación y setup · 06-05
 
 **HU-04 · Alta · 3SP · SM — Estructuración del repositorio**
