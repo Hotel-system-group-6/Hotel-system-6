@@ -16,7 +16,7 @@ El documento `05_id_y_auditoria.md` define los campos comunes que deben estar pr
 
 El sistema hotelero tiene características que hacen relevante esta decisión:
 
-- Cubre múltiples dominios funcionales con tablas distribuidas en 7 schemas de PostgreSQL.
+- Cubre múltiples dominios funcionales con tablas distribuidas en 8 schemas de PostgreSQL.
 - Incluye entidades críticas con trazabilidad sensible: reservas, facturas, pagos, usuarios, habitaciones y movimientos de inventario.
 - Puede integrarse con sistemas externos como pasarelas de pago, canales de notificación y otras plataformas.
 - El modelo contempla eliminación lógica de registros, lo que implica que los identificadores deben ser estables y no reutilizables.
@@ -38,7 +38,7 @@ id UUID NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY
 
 ### Campos de auditoría relacionados
 
-Los campos `created_by`, `updated_by` y `deleted_by` también usarán tipo `UUID` para mantener consistencia con el identificador de `identity_security.user`:
+Los campos `created_by`, `updated_by` y `deleted_by` también usarán tipo `UUID` para mantener consistencia con el identificador de `security.app_user`:
 
 ```sql
 id          UUID      NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY,
@@ -81,19 +81,21 @@ Los UUID se representan como `String` en la capa de aplicación y se transfieren
 
 ## Tablas afectadas
 
-La decisión aplica a las 46 tablas del modelo, distribuidas en los 7 schemas de dominio:
+La decisión aplica a las 46 tablas del modelo, distribuidas en los 8 schemas de dominio:
 
-**identity_security**: persona, usuario, rol, permiso, modulo, vista, usuario_rol, rol_permiso, modulo_vista.
+**parameterization**: cliente, precio, empresa, informacion_legal, empleado, tipo_dia, metodo_pago.
 
-**company_operations**: cliente, precio, empresa, informacion_legal, empleado, tipo_dia, metodo_pago.
+**distribution**: sede, habitacion, tipo_habitacion, estado_habitacion.
 
-**rooms_reservations**: sede, habitacion, tipo_habitacion, estado_habitacion, reserva_habitacion, cancelacion_habitacion, disponibilidad_habitacion, catalogo_habitacion, check_in, check_out, estadia, venta_producto, venta_servicio.
+**service_delivery**: reserva_habitacion, cancelacion_habitacion, disponibilidad_habitacion, catalogo_habitacion, check_in, check_out, estadia, venta_producto, venta_servicio.
 
-**inventory_services**: producto, servicio, proveedor, seguimiento_producto, disponibilidad_inventario.
+**billing**: pre_factura, pago_parcial, factura, detalle_compra.
 
-**billing_payments**: pre_factura, pago_parcial, factura, detalle_compra.
+**inventory**: producto, servicio, proveedor, seguimiento_producto, disponibilidad_inventario.
 
-**communication_loyalty**: promocion, alerta, termino_condicion, fidelizacion_cliente.
+**notification**: promocion, alerta, termino_condicion, fidelizacion_cliente.
+
+**security**: persona, usuario, rol, permiso, modulo, vista, usuario_rol, rol_permiso, modulo_vista.
 
 **maintenance**: mantenimiento_habitacion, mantenimiento_uso, mantenimiento_remodelacion, dashboard_mantenimiento.
 

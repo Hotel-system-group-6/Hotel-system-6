@@ -3,7 +3,7 @@ databaseChangeLog:
       id: 2579515e-31ed-4ccb-80c1-a8eb668fb943
       author: daniel2004-lsd
       labels: "dml,inserts,postgresql,seed"
-      comment: Inserts five sample records into each hotel system table.
+      comment: Inserts sample records with UUID identifiers and eight functional modules.
       changes:
         - sqlFile:
             path: 001-seed-sample-data.sql

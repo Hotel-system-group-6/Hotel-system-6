@@ -1,0 +1,26 @@
+CREATE TABLE product_sale (
+  id UUID NOT NULL DEFAULT gen_random_uuid(),
+  stay_id UUID NOT NULL,
+  product_id UUID NOT NULL,
+  quantity INTEGER NOT NULL,
+  unit_amount DECIMAL(12,2) NOT NULL,
+  total_amount DECIMAL(12,2) NOT NULL,
+  created_by UUID NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_by UUID NULL,
+  updated_at TIMESTAMPTZ NULL,
+  deleted_by UUID NULL,
+  deleted_at TIMESTAMPTZ NULL,
+  status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
+  PRIMARY KEY (id),
+  CONSTRAINT fk_product_sale_stay FOREIGN KEY (stay_id) REFERENCES stay (id),
+  CONSTRAINT fk_product_sale_product FOREIGN KEY (product_id) REFERENCES product (id),
+  CONSTRAINT ck_product_sale_values CHECK (quantity > 0 AND unit_amount >= 0 AND total_amount >= 0)
+);
+
+CREATE INDEX ix_product_sale_stay ON product_sale (stay_id);
+CREATE INDEX ix_product_sale_product ON product_sale (product_id);
+
+
+
+

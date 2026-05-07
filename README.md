@@ -7,6 +7,7 @@ El motor objetivo actual es PostgreSQL 16, gestionado con Liquibase y Docker Com
 ## Documentacion principal
 
 - `docs/analisis_dominios.md`
+- `docs/funcionalidades_sistema.md`
 - `docs/notas_migracion_postgresql.md`
 - `docs/plan_trabajo_inicial.md`
 - `docs/plan_datos_prueba.md`
