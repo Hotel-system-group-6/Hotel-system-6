@@ -13,8 +13,6 @@ CREATE TABLE product_sale (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT fk_product_sale_stay FOREIGN KEY (stay_id) REFERENCES stay (id),
-  CONSTRAINT fk_product_sale_product FOREIGN KEY (product_id) REFERENCES product (id),
   CONSTRAINT ck_product_sale_values CHECK (quantity > 0 AND unit_amount >= 0 AND total_amount >= 0)
 );
 

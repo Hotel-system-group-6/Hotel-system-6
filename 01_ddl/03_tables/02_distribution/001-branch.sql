@@ -14,8 +14,7 @@ CREATE TABLE branch (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT uk_branch_company_name UNIQUE (company_id, name),
-  CONSTRAINT fk_branch_company FOREIGN KEY (company_id) REFERENCES company (id)
+  CONSTRAINT uk_branch_company_name UNIQUE (company_id, name)
 );
 
 

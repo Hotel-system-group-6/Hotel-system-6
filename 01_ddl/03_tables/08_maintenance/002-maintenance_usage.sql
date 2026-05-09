@@ -11,8 +11,7 @@ CREATE TABLE maintenance_usage (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT uk_maintenance_usage UNIQUE (room_maintenance_id),
-  CONSTRAINT fk_maintenance_usage_base FOREIGN KEY (room_maintenance_id) REFERENCES room_maintenance (id)
+  CONSTRAINT uk_maintenance_usage UNIQUE (room_maintenance_id)
 );
 
 

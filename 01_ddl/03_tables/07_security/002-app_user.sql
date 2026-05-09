@@ -14,8 +14,7 @@ CREATE TABLE app_user (
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
   CONSTRAINT uk_app_user_person UNIQUE (person_id),
-  CONSTRAINT uk_app_user_username UNIQUE (username),
-  CONSTRAINT fk_app_user_person FOREIGN KEY (person_id) REFERENCES person (id)
+  CONSTRAINT uk_app_user_username UNIQUE (username)
 );
 
 

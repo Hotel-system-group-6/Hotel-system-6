@@ -14,9 +14,6 @@ CREATE TABLE partial_payment (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT fk_payment_reservation FOREIGN KEY (room_reservation_id) REFERENCES room_reservation (id),
-  CONSTRAINT fk_payment_invoice FOREIGN KEY (invoice_id) REFERENCES invoice (id),
-  CONSTRAINT fk_payment_method FOREIGN KEY (payment_method_id) REFERENCES payment_method (id),
   CONSTRAINT ck_payment_amount CHECK (amount > 0),
   CONSTRAINT ck_payment_source CHECK (room_reservation_id IS NOT NULL OR invoice_id IS NOT NULL)
 );

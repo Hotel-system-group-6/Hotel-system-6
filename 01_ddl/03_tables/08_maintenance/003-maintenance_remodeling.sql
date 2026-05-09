@@ -12,7 +12,6 @@ CREATE TABLE maintenance_remodeling (
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
   CONSTRAINT uk_maintenance_remodeling UNIQUE (room_maintenance_id),
-  CONSTRAINT fk_maintenance_remodeling_base FOREIGN KEY (room_maintenance_id) REFERENCES room_maintenance (id),
   CONSTRAINT ck_maintenance_budget CHECK (estimated_budget IS NULL OR estimated_budget >= 0)
 );
 

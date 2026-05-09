@@ -14,7 +14,6 @@ CREATE TABLE room_cancellation (
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
   CONSTRAINT uk_cancellation_reservation UNIQUE (room_reservation_id),
-  CONSTRAINT fk_cancellation_reservation FOREIGN KEY (room_reservation_id) REFERENCES room_reservation (id),
   CONSTRAINT ck_cancellation_penalty CHECK (penalty_amount >= 0)
 );
 

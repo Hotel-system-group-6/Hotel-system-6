@@ -15,10 +15,7 @@ CREATE TABLE room (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT uk_room_branch_number UNIQUE (branch_id, number),
-  CONSTRAINT fk_room_branch FOREIGN KEY (branch_id) REFERENCES branch (id),
-  CONSTRAINT fk_room_type FOREIGN KEY (room_type_id) REFERENCES room_type (id),
-  CONSTRAINT fk_room_status FOREIGN KEY (room_status_id) REFERENCES room_status (id)
+  CONSTRAINT uk_room_branch_number UNIQUE (branch_id, number)
 );
 
 CREATE INDEX ix_room_type ON room (room_type_id);

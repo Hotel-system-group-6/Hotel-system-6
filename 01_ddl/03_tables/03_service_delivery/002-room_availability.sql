@@ -13,7 +13,6 @@ CREATE TABLE room_availability (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT fk_room_availability FOREIGN KEY (room_id) REFERENCES room (id),
   CONSTRAINT ck_availability_dates CHECK (end_date > start_date)
 );
 

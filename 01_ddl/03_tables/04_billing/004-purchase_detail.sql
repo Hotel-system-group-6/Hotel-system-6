@@ -15,9 +15,6 @@ CREATE TABLE purchase_detail (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT fk_detail_invoice FOREIGN KEY (invoice_id) REFERENCES invoice (id),
-  CONSTRAINT fk_detail_product FOREIGN KEY (product_id) REFERENCES product (id),
-  CONSTRAINT fk_detail_service FOREIGN KEY (service_id) REFERENCES service (id),
   CONSTRAINT ck_detail_values CHECK (quantity > 0 AND unit_amount >= 0 AND total_amount >= 0),
   CONSTRAINT ck_detail_item CHECK (product_id IS NOT NULL OR service_id IS NOT NULL)
 );

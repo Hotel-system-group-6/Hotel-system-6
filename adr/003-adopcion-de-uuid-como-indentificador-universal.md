@@ -28,7 +28,7 @@ El uso de `BIGINT AUTO_INCREMENT` (o `BIGSERIAL` en PostgreSQL) implica identifi
 
 ## Decisión
 
-Se adopta **UUID** (`gen_random_uuid()`) como tipo de identificador para todas las tablas del sistema.
+    Se adopta **UUID** (`gen_random_uuid()`) como tipo de identificador para todas las tablas del sistema.
 
 ### Definición del campo `id` en PostgreSQL
 

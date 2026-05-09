@@ -1,0 +1,4 @@
+-- DISTRIBUTION: room
+ALTER TABLE room DROP CONSTRAINT fk_room_branch;
+ALTER TABLE room DROP CONSTRAINT fk_room_type;
+ALTER TABLE room DROP CONSTRAINT fk_room_status;

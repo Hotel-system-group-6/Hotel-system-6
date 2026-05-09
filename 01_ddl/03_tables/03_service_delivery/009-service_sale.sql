@@ -13,8 +13,6 @@ CREATE TABLE service_sale (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT fk_service_sale_stay FOREIGN KEY (stay_id) REFERENCES stay (id),
-  CONSTRAINT fk_service_sale_service FOREIGN KEY (service_id) REFERENCES service (id),
   CONSTRAINT ck_service_sale_values CHECK (quantity > 0 AND unit_amount >= 0 AND total_amount >= 0)
 );
 

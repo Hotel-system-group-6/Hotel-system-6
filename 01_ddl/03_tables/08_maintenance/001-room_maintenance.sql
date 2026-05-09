@@ -15,8 +15,7 @@ CREATE TABLE room_maintenance (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT fk_room_maintenance FOREIGN KEY (room_id) REFERENCES room (id),
-  CONSTRAINT fk_maintenance_employee FOREIGN KEY (employee_id) REFERENCES employee (id)
+
 );
 
 CREATE INDEX ix_room_maintenance ON room_maintenance (room_id, start_date, end_date);

@@ -10,6 +10,12 @@ databaseChangeLog:
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/06_notification/001-promotion.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
 
   - changeSet:
       id: e6d9c228-3658-42b2-a801-aeccf064639f
@@ -19,6 +25,12 @@ databaseChangeLog:
       changes:
         - sqlFile:
             path: 002-alert.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/06_notification/002-alert.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -34,6 +46,12 @@ databaseChangeLog:
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/06_notification/003-terms_condition.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
 
   - changeSet:
       id: 2f43c1a4-8cfc-4edf-82f4-c95314e3e697
@@ -43,6 +61,12 @@ databaseChangeLog:
       changes:
         - sqlFile:
             path: 004-customer_loyalty.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/06_notification/004-customer_loyalty.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false

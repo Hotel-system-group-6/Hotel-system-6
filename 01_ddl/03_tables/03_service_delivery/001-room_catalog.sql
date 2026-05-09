@@ -14,7 +14,6 @@ CREATE TABLE room_catalog (
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
   CONSTRAINT uk_room_catalog UNIQUE (room_id),
-  CONSTRAINT fk_room_catalog FOREIGN KEY (room_id) REFERENCES room (id),
   CONSTRAINT ck_catalog_price CHECK (base_price >= 0)
 );
 

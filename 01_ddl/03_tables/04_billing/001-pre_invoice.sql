@@ -16,9 +16,6 @@ CREATE TABLE pre_invoice (
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
   CONSTRAINT uk_pre_invoice_stay UNIQUE (stay_id),
-  CONSTRAINT fk_pre_invoice_stay FOREIGN KEY (stay_id) REFERENCES stay (id),
-  CONSTRAINT fk_pre_invoice_reservation FOREIGN KEY (room_reservation_id) REFERENCES room_reservation (id),
-  CONSTRAINT fk_pre_invoice_customer FOREIGN KEY (customer_id) REFERENCES customer (id),
   CONSTRAINT ck_pre_invoice_values CHECK (subtotal >= 0 AND tax_amount >= 0 AND discount_amount >= 0 AND total >= 0)
 );
 

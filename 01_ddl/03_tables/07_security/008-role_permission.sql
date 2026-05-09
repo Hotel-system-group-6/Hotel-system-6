@@ -10,9 +10,7 @@ CREATE TABLE role_permission (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT uk_role_permission UNIQUE (role_id, permission_id),
-  CONSTRAINT fk_role_permission_app_role FOREIGN KEY (role_id) REFERENCES app_role (id),
-  CONSTRAINT fk_role_permission_permission FOREIGN KEY (permission_id) REFERENCES permission (id)
+  CONSTRAINT uk_role_permission UNIQUE (role_id, permission_id)
 );
 
 

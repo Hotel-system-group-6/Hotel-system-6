@@ -13,7 +13,6 @@ CREATE TABLE product_tracking (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT fk_product_tracking FOREIGN KEY (product_id) REFERENCES product (id),
   CONSTRAINT ck_tracking_quantity CHECK (quantity > 0)
 );
 

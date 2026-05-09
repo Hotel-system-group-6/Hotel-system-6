@@ -12,9 +12,7 @@ CREATE TABLE check_in (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT uk_check_in_reservation UNIQUE (room_reservation_id),
-  CONSTRAINT fk_check_in_reservation FOREIGN KEY (room_reservation_id) REFERENCES room_reservation (id),
-  CONSTRAINT fk_check_in_employee FOREIGN KEY (employee_id) REFERENCES employee (id)
+  CONSTRAINT uk_check_in_reservation UNIQUE (room_reservation_id)
 );
 
 CREATE INDEX ix_check_in_employee ON check_in (employee_id);

@@ -19,8 +19,6 @@ CREATE TABLE invoice (
   PRIMARY KEY (id),
   CONSTRAINT uk_invoice_number UNIQUE (invoice_number),
   CONSTRAINT uk_invoice_stay UNIQUE (stay_id),
-  CONSTRAINT fk_invoice_customer FOREIGN KEY (customer_id) REFERENCES customer (id),
-  CONSTRAINT fk_invoice_stay FOREIGN KEY (stay_id) REFERENCES stay (id),
   CONSTRAINT ck_invoice_values CHECK (subtotal >= 0 AND tax_amount >= 0 AND discount_amount >= 0 AND total >= 0)
 );
 

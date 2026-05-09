@@ -14,7 +14,7 @@ CREATE TABLE maintenance_dashboard (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT fk_maintenance_dashboard_branch FOREIGN KEY (branch_id) REFERENCES branch (id)
+
 );
 
 CREATE INDEX ix_maintenance_dashboard_branch_date ON maintenance_dashboard (branch_id, snapshot_at);

@@ -14,10 +14,7 @@ CREATE TABLE stay (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT uk_stay_reservation UNIQUE (room_reservation_id),
-  CONSTRAINT fk_stay_reservation FOREIGN KEY (room_reservation_id) REFERENCES room_reservation (id),
-  CONSTRAINT fk_stay_customer FOREIGN KEY (customer_id) REFERENCES customer (id),
-  CONSTRAINT fk_stay_room FOREIGN KEY (room_id) REFERENCES room (id)
+  CONSTRAINT uk_stay_reservation UNIQUE (room_reservation_id)
 );
 
 CREATE INDEX ix_stay_customer ON stay (customer_id);

@@ -12,7 +12,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../05_rollbacks/01_ddl/03_tables/01_parameterization/001-customer.rollback.sql
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/001-customer.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -30,7 +30,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../05_rollbacks/01_ddl/03_tables/01_parameterization/002-price.rollback.sql
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/002-price.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -48,7 +48,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../05_rollbacks/01_ddl/03_tables/01_parameterization/003-company.rollback.sql
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/003-company.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -66,7 +66,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../05_rollbacks/01_ddl/03_tables/01_parameterization/004-legal_information.rollback.sql
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/004-legal_information.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -84,7 +84,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../05_rollbacks/01_ddl/03_tables/01_parameterization/005-employee.rollback.sql
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/005-employee.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -102,7 +102,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../05_rollbacks/01_ddl/03_tables/01_parameterization/006-day_type.rollback.sql
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/006-day_type.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -120,7 +120,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../05_rollbacks/01_ddl/03_tables/01_parameterization/007-payment_method.rollback.sql
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/007-payment_method.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false

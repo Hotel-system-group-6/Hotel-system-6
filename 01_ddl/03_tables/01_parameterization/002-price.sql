@@ -15,8 +15,6 @@ CREATE TABLE price (
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
   CONSTRAINT uk_price_day_type_inicio UNIQUE (room_type_id, day_type_id, start_date),
-  CONSTRAINT fk_price_room_type FOREIGN KEY (room_type_id) REFERENCES room_type (id),
-  CONSTRAINT fk_price_day_type FOREIGN KEY (day_type_id) REFERENCES day_type (id),
   CONSTRAINT ck_price_amount CHECK (amount >= 0)
 );
 

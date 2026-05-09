@@ -14,7 +14,7 @@ CREATE TABLE legal_information (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT fk_legal_information_company FOREIGN KEY (company_id) REFERENCES company (id)
+
 );
 
 CREATE INDEX ix_legal_information_company ON legal_information (company_id);

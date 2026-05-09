@@ -10,9 +10,7 @@ CREATE TABLE app_user_role (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT uk_app_user_role UNIQUE (app_user_id, role_id),
-  CONSTRAINT fk_app_user_role_app_user FOREIGN KEY (app_user_id) REFERENCES app_user (id),
-  CONSTRAINT fk_app_user_role_app_role FOREIGN KEY (role_id) REFERENCES app_role (id)
+  CONSTRAINT uk_app_user_role UNIQUE (app_user_id, role_id)
 );
 
 

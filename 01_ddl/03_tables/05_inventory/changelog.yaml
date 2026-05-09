@@ -10,6 +10,12 @@ databaseChangeLog:
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/05_inventory/001-product.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
 
   - changeSet:
       id: 09daabdd-6aee-48d2-8e98-8c29ffa9e526
@@ -19,6 +25,12 @@ databaseChangeLog:
       changes:
         - sqlFile:
             path: 002-service.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/05_inventory/002-service.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -34,6 +46,12 @@ databaseChangeLog:
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/05_inventory/003-supplier.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
 
   - changeSet:
       id: fc57b4d3-0ae2-4256-a303-8f3d185d4c99
@@ -46,6 +64,12 @@ databaseChangeLog:
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/05_inventory/004-product_tracking.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
 
   - changeSet:
       id: 6050148b-bce8-4590-9c9c-578aec9ba563
@@ -55,6 +79,12 @@ databaseChangeLog:
       changes:
         - sqlFile:
             path: 005-inventory_availability.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/05_inventory/005-inventory_availability.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false

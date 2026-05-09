@@ -14,8 +14,6 @@ CREATE TABLE check_out (
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
   CONSTRAINT uk_check_out_stay UNIQUE (stay_id),
-  CONSTRAINT fk_check_out_stay FOREIGN KEY (stay_id) REFERENCES stay (id),
-  CONSTRAINT fk_check_out_employee FOREIGN KEY (employee_id) REFERENCES employee (id),
   CONSTRAINT ck_check_out_amount CHECK (total_amount >= 0)
 );
 

@@ -14,8 +14,7 @@ CREATE TABLE employee (
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
   CONSTRAINT uk_employee_person UNIQUE (person_id),
-  CONSTRAINT uk_employee_work_email UNIQUE (work_email),
-  CONSTRAINT fk_employee_person FOREIGN KEY (person_id) REFERENCES person (id)
+  CONSTRAINT uk_employee_work_email UNIQUE (work_email)
 );
 
 

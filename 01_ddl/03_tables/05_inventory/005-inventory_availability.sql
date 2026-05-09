@@ -13,8 +13,6 @@ CREATE TABLE inventory_availability (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT fk_availability_inventory_product FOREIGN KEY (product_id) REFERENCES product (id),
-  CONSTRAINT fk_availability_inventory_service FOREIGN KEY (service_id) REFERENCES service (id),
   CONSTRAINT ck_availability_inventory_item CHECK (product_id IS NOT NULL OR service_id IS NOT NULL),
   CONSTRAINT ck_availability_inventory_quantity CHECK (available_quantity >= 0)
 );

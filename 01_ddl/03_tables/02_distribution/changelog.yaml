@@ -10,6 +10,12 @@ databaseChangeLog:
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/02_distribution/001-branch.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
 
   - changeSet:
       id: 8a1e0e61-a3cd-4acf-8746-4dc3277a6a2e
@@ -19,6 +25,12 @@ databaseChangeLog:
       changes:
         - sqlFile:
             path: 002-room.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/02_distribution/002-room.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -34,6 +46,12 @@ databaseChangeLog:
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/02_distribution/003-room_type.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
 
   - changeSet:
       id: dc367df4-7c9f-4521-b0c6-ad71b808cb4e
@@ -43,6 +61,12 @@ databaseChangeLog:
       changes:
         - sqlFile:
             path: 004-room_status.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/02_distribution/004-room_status.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false

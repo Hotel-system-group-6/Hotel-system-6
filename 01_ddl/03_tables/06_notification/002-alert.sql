@@ -14,8 +14,7 @@ CREATE TABLE alert (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT fk_alert_customer FOREIGN KEY (customer_id) REFERENCES customer (id),
-  CONSTRAINT fk_alert_reservation FOREIGN KEY (room_reservation_id) REFERENCES room_reservation (id)
+
 );
 
 CREATE INDEX ix_alert_customer ON alert (customer_id);

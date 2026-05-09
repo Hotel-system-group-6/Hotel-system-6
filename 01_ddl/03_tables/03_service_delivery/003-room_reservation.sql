@@ -15,8 +15,6 @@ CREATE TABLE room_reservation (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT fk_reservation_customer FOREIGN KEY (customer_id) REFERENCES customer (id),
-  CONSTRAINT fk_room_reservation FOREIGN KEY (room_id) REFERENCES room (id),
   CONSTRAINT ck_reservation_dates CHECK (end_date > start_date)
 );
 

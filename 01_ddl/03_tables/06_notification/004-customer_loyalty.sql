@@ -13,8 +13,7 @@ CREATE TABLE customer_loyalty (
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
   PRIMARY KEY (id),
-  CONSTRAINT uk_customer_loyalty UNIQUE (customer_id),
-  CONSTRAINT fk_customer_loyalty FOREIGN KEY (customer_id) REFERENCES customer (id)
+  CONSTRAINT uk_customer_loyalty UNIQUE (customer_id)
 );
 
 
