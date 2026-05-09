@@ -12,26 +12,27 @@ databaseChangeLog:
       file: 03_tables/changelog.yaml
       relativeToChangelogFile: true
   - include:
-      file: 04_views/changelog.yaml
+      file: 04_constraints/changelog.yaml
       relativeToChangelogFile: true
   - include:
-      file: 05_materialized_views/changelog.yaml
+      file: 05_views/changelog.yaml
       relativeToChangelogFile: true
   - include:
-      file: 06_functions/changelog.yaml
+      file: 06_materialized_views/changelog.yaml
       relativeToChangelogFile: true
   - include:
-      file: 07_procedures/changelog.yaml
+      file: 07_functions/changelog.yaml
       relativeToChangelogFile: true
   - include:
-      file: 08_triggers/changelog.yaml
+      file: 08_procedures/changelog.yaml
       relativeToChangelogFile: true
   - include:
-      file: 09_indexes/changelog.yaml
+      file: 09_triggers/changelog.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 10_indexes/changelog.yaml
       relativeToChangelogFile: true
   - include:
       file: 10_schema_assignments/changelog.yaml
       relativeToChangelogFile: true
-  - include:
-      file: 04_constraints/changelog.yaml
-      relativeToChangelogFile: true
+

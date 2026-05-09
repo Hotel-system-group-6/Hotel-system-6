@@ -13,8 +13,7 @@ CREATE TABLE maintenance_dashboard (
   deleted_by UUID NULL,
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
-  PRIMARY KEY (id),
-
+  PRIMARY KEY (id)
 );
 
 CREATE INDEX ix_maintenance_dashboard_branch_date ON maintenance_dashboard (branch_id, snapshot_at);

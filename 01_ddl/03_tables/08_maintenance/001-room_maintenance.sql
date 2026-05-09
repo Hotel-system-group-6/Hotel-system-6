@@ -14,8 +14,7 @@ CREATE TABLE room_maintenance (
   deleted_by UUID NULL,
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
-  PRIMARY KEY (id),
-
+  PRIMARY KEY (id)
 );
 
 CREATE INDEX ix_room_maintenance ON room_maintenance (room_id, start_date, end_date);

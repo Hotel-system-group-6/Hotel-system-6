@@ -1,18 +1,144 @@
 databaseChangeLog:
   - changeSet:
-      id: 77fdec64-2db8-42cb-9f92-05bfabc98f88
+      id: 2fda7437-1608-44f0-b67b-d826ad344a5b
       author: daniel2004-lsd
       labels: "ddl,schemas,postgresql,hotel-system"
-      comment: Moves existing hotel system tables from public into their domain schemas.
+      comment: Creates schema parameterization.
       changes:
         - sqlFile:
-            path: 001-assign-tables-to-domain-schemas.sql
+            path: 001_schema_parameterization.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../05_rollbacks/01_ddl/01_schemas/001-assign-tables-to-domain-schemas.rollback.sql
+            path: ../../05_rollbacks/01_ddl/01_schemas/001_schema_parameterization.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 5c86d338-15ad-4709-8b98-1b6c1e4770d2
+      author: daniel2004-lsd
+      labels: "ddl,schemas,postgresql,hotel-system"
+      comment: Creates schema distribution.
+      changes:
+        - sqlFile:
+            path: 002_schema_distribution.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/01_schemas/002_schema_distribution.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 22dfda6d-3a32-4236-a7fc-04084a271b99
+      author: daniel2004-lsd
+      labels: "ddl,schemas,postgresql,hotel-system"
+      comment: Creates schema service_delivery.
+      changes:
+        - sqlFile:
+            path: 003_schema_service_delivery.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/01_schemas/003_schema_service_delivery.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 1df54566-79e2-4b00-91fa-8e4ea5d2d822
+      author: daniel2004-lsd
+      labels: "ddl,schemas,postgresql,hotel-system"
+      comment: Creates schema billing.
+      changes:
+        - sqlFile:
+            path: 004_schema_billing.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/01_schemas/004_schema_billing.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 5fd8e576-d917-4d09-ad63-53ea467905da
+      author: daniel2004-lsd
+      labels: "ddl,schemas,postgresql,hotel-system"
+      comment: Creates schema inventory.
+      changes:
+        - sqlFile:
+            path: 005_schema_inventory.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/01_schemas/005_schema_inventory.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 52ae88c5-0850-47f2-9662-9e34b71261c0
+      author: daniel2004-lsd
+      labels: "ddl,schemas,postgresql,hotel-system"
+      comment: Creates schema notification.
+      changes:
+        - sqlFile:
+            path: 006_schema_notification.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/01_schemas/006_schema_notification.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 24cf3561-49f4-4916-9640-15570e60ba9a
+      author: daniel2004-lsd
+      labels: "ddl,schemas,postgresql,hotel-system"
+      comment: Creates schema security.
+      changes:
+        - sqlFile:
+            path: 007_schema_security.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/01_schemas/007_schema_security.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 129465bc-de6a-4ad1-be35-dc7655c52ac3
+      author: daniel2004-lsd
+      labels: "ddl,schemas,postgresql,hotel-system"
+      comment: Creates schema maintenance.
+      changes:
+        - sqlFile:
+            path: 008_schema_maintenance.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/01_schemas/008_schema_maintenance.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
