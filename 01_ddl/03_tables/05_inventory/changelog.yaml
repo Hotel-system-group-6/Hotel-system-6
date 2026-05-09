@@ -1,0 +1,90 @@
+databaseChangeLog:
+  - changeSet:
+      id: 7b806761-a800-478b-921e-e35369e2115a
+      author: daniel2004-lsd
+      labels: "ddl,tables,05_inventory"
+      comment: Creates table product.
+      changes:
+        - sqlFile:
+            path: 001-product.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/05_inventory/001-product.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 09daabdd-6aee-48d2-8e98-8c29ffa9e526
+      author: daniel2004-lsd
+      labels: "ddl,tables,05_inventory"
+      comment: Creates table service.
+      changes:
+        - sqlFile:
+            path: 002-service.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/05_inventory/002-service.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 0f2bcf91-e65e-482d-9b55-598696a5e4da
+      author: daniel2004-lsd
+      labels: "ddl,tables,05_inventory"
+      comment: Creates table supplier.
+      changes:
+        - sqlFile:
+            path: 003-supplier.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/05_inventory/003-supplier.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: fc57b4d3-0ae2-4256-a303-8f3d185d4c99
+      author: daniel2004-lsd
+      labels: "ddl,tables,05_inventory"
+      comment: Creates table product_tracking.
+      changes:
+        - sqlFile:
+            path: 004-product_tracking.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/05_inventory/004-product_tracking.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 6050148b-bce8-4590-9c9c-578aec9ba563
+      author: daniel2004-lsd
+      labels: "ddl,tables,05_inventory"
+      comment: Creates table inventory_availability.
+      changes:
+        - sqlFile:
+            path: 005-inventory_availability.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/05_inventory/005-inventory_availability.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false

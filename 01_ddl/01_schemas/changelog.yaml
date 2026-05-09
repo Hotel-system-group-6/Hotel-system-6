@@ -1,18 +1,18 @@
 databaseChangeLog:
   - changeSet:
-      id: dbebdb88-ee6b-415a-a7d1-4d37132a7183
+      id: 77fdec64-2db8-42cb-9f92-05bfabc98f88
       author: daniel2004-lsd
       labels: "ddl,schemas,postgresql,hotel-system"
-      comment: Creates PostgreSQL schemas for the hotel system bounded domains.
+      comment: Moves existing hotel system tables from public into their domain schemas.
       changes:
         - sqlFile:
-            path: 001-create-domain-schemas.sql
+            path: 001-assign-tables-to-domain-schemas.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../05_rollbacks/01_ddl/01_schemas/001-create-domain-schemas.rollback.sql
+            path: ../../05_rollbacks/01_ddl/01_schemas/001-assign-tables-to-domain-schemas.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false

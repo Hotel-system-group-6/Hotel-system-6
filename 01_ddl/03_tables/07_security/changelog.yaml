@@ -1,0 +1,162 @@
+databaseChangeLog:
+  - changeSet:
+      id: b3f9f7b0-267d-4e50-8fbe-1eef5944e3fc
+      author: daniel2004-lsd
+      labels: "ddl,tables,07_security"
+      comment: Creates table person.
+      changes:
+        - sqlFile:
+            path: 001-person.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/07_security/001-person.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 147a3e33-a740-4226-85ff-ed048b317e64
+      author: daniel2004-lsd
+      labels: "ddl,tables,07_security"
+      comment: Creates table app_user.
+      changes:
+        - sqlFile:
+            path: 002-app_user.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/07_security/002-app_user.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 6efc709e-7a08-4c33-8991-264832c886c0
+      author: daniel2004-lsd
+      labels: "ddl,tables,07_security"
+      comment: Creates table app_role.
+      changes:
+        - sqlFile:
+            path: 003-app_role.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/07_security/003-app_role.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 28538cb3-7b63-484d-bd7f-5ae8d90ad395
+      author: daniel2004-lsd
+      labels: "ddl,tables,07_security"
+      comment: Creates table permission.
+      changes:
+        - sqlFile:
+            path: 004-permission.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/07_security/004-permission.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: d27be11b-3ef8-49b8-8cca-963662a962a9
+      author: daniel2004-lsd
+      labels: "ddl,tables,07_security"
+      comment: Creates table module.
+      changes:
+        - sqlFile:
+            path: 005-module.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/07_security/005-module.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 74700794-b025-43e5-a23f-5a52665c2e64
+      author: codex
+      labels: "ddl,tables,07_security"
+      comment: Creates table screen.
+      changes:
+        - sqlFile:
+            path: 006-screen.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/07_security/006-screen.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: d46c86e0-bb1b-4e95-88c8-26982102c201
+      author: daniel2004-lsd
+      labels: "ddl,tables,07_security"
+      comment: Creates table app_user_role.
+      changes:
+        - sqlFile:
+            path: 007-app_user_role.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/07_security/007-app_user_role.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: e1015170-6165-455f-8832-6d18fe2c7b17
+      author: daniel2004-lsd
+      labels: "ddl,tables,07_security"
+      comment: Creates table role_permission.
+      changes:
+        - sqlFile:
+            path: 008-role_permission.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/07_security/008-role_permission.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 4278bb0c-a665-4cdf-9436-3780b4d6bd53
+      author: daniel2004-lsd
+      labels: "ddl,tables,07_security"
+      comment: Creates table module_screen.
+      changes:
+        - sqlFile:
+            path: 009-module_screen.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/07_security/009-module_screen.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false

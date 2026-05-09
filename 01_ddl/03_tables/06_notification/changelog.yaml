@@ -1,0 +1,72 @@
+databaseChangeLog:
+  - changeSet:
+      id: e5145c06-710c-494c-afab-62a4c06993a2
+      author: daniel2004-lsd
+      labels: "ddl,tables,06_notification"
+      comment: Creates table promotion.
+      changes:
+        - sqlFile:
+            path: 001-promotion.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/06_notification/001-promotion.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: e6d9c228-3658-42b2-a801-aeccf064639f
+      author: daniel2004-lsd
+      labels: "ddl,tables,06_notification"
+      comment: Creates table alert.
+      changes:
+        - sqlFile:
+            path: 002-alert.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/06_notification/002-alert.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 30ec4b93-cd2f-4d6c-bab6-149d64a1c0a7
+      author: daniel2004-lsd
+      labels: "ddl,tables,06_notification"
+      comment: Creates table terms_condition.
+      changes:
+        - sqlFile:
+            path: 003-terms_condition.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/06_notification/003-terms_condition.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 2f43c1a4-8cfc-4edf-82f4-c95314e3e697
+      author: daniel2004-lsd
+      labels: "ddl,tables,06_notification"
+      comment: Creates table customer_loyalty.
+      changes:
+        - sqlFile:
+            path: 004-customer_loyalty.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/06_notification/004-customer_loyalty.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false

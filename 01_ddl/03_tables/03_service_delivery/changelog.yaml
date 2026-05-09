@@ -1,0 +1,162 @@
+databaseChangeLog:
+  - changeSet:
+      id: 51985e69-63f6-441c-afba-c3068945f617
+      author: daniel2004-lsd
+      labels: "ddl,tables,03_service_delivery"
+      comment: Creates table room_catalog.
+      changes:
+        - sqlFile:
+            path: 001-room_catalog.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_service_delivery/001-room_catalog.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 14a34ef1-e760-426a-9a7f-510c29c89651
+      author: daniel2004-lsd
+      labels: "ddl,tables,03_service_delivery"
+      comment: Creates table room_availability.
+      changes:
+        - sqlFile:
+            path: 002-room_availability.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_service_delivery/002-room_availability.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 815c5073-6801-43fd-925f-edaa14a3b7f2
+      author: daniel2004-lsd
+      labels: "ddl,tables,03_service_delivery"
+      comment: Creates table room_reservation.
+      changes:
+        - sqlFile:
+            path: 003-room_reservation.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_service_delivery/003-room_reservation.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 58fdc252-3bda-4bbd-93e2-424c33af6ef0
+      author: daniel2004-lsd
+      labels: "ddl,tables,03_service_delivery"
+      comment: Creates table room_cancellation.
+      changes:
+        - sqlFile:
+            path: 004-room_cancellation.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_service_delivery/004-room_cancellation.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 2b8122cd-0441-481c-95a2-a439a78bbdc6
+      author: daniel2004-lsd
+      labels: "ddl,tables,03_service_delivery"
+      comment: Creates table check_in.
+      changes:
+        - sqlFile:
+            path: 005-check_in.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_service_delivery/005-check_in.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: c0b6f115-87bf-41df-b9b4-e918c3bbcd7a
+      author: daniel2004-lsd
+      labels: "ddl,tables,03_service_delivery"
+      comment: Creates table check_out.
+      changes:
+        - sqlFile:
+            path: 006-check_out.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_service_delivery/006-check_out.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 58379b4a-d005-4a99-afc2-3fca57551046
+      author: daniel2004-lsd
+      labels: "ddl,tables,03_service_delivery"
+      comment: Creates table stay.
+      changes:
+        - sqlFile:
+            path: 007-stay.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_service_delivery/007-stay.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 6894b677-183c-40b7-911d-9628eb635d2e
+      author: daniel2004-lsd
+      labels: "ddl,tables,03_service_delivery"
+      comment: Creates table product_sale.
+      changes:
+        - sqlFile:
+            path: 008-product_sale.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_service_delivery/008-product_sale.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 6b131a1d-1021-4974-b891-51a1f02b6c36
+      author: daniel2004-lsd
+      labels: "ddl,tables,03_service_delivery"
+      comment: Creates table service_sale.
+      changes:
+        - sqlFile:
+            path: 009-service_sale.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/03_service_delivery/009-service_sale.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false

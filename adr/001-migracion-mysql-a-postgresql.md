@@ -109,7 +109,7 @@ En la implementacion fisica de PostgreSQL se crea un schema por cada modulo func
 
 - Liquibase valida todos los changelogs sin errores de checksum ni conflictos.
 - PostgreSQL 16 aplica todos los scripts correctamente.
-- Las 46 tablas existen con nombres en inglés, distribuidas en los 7 schemas de dominio.
+- Las 46 tablas existen con nombres en inglés, distribuidas en los 8 schemas de dominio.
 - Constraints, índices y triggers usan nombres en inglés con convención uniforme.
 - Todos los identificadores son UUID v4 (ver ADR-003).
 - La documentación describe la organización y las decisiones principales.

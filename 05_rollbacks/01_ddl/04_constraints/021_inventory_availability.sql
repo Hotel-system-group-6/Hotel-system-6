@@ -1,0 +1,3 @@
+-- INVENTORY: inventory_availability
+ALTER TABLE inventory_availability DROP CONSTRAINT fk_availability_inventory_product;
+ALTER TABLE inventory_availability DROP CONSTRAINT fk_availability_inventory_service;

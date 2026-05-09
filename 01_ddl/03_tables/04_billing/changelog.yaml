@@ -1,0 +1,72 @@
+databaseChangeLog:
+  - changeSet:
+      id: a1192100-628c-4cfe-9153-5625c0fdf981
+      author: daniel2004-lsd
+      labels: "ddl,tables,04_billing"
+      comment: Creates table pre_invoice.
+      changes:
+        - sqlFile:
+            path: 001-pre_invoice.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/04_billing/001-pre_invoice.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 2a2497c5-b57e-46ba-a240-6fb8ed0b2b02
+      author: daniel2004-lsd
+      labels: "ddl,tables,04_billing"
+      comment: Creates table partial_payment.
+      changes:
+        - sqlFile:
+            path: 002-partial_payment.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/04_billing/002-partial_payment.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 9123fc1d-2e3f-42d6-a005-00a07ce5dd07
+      author: daniel2004-lsd
+      labels: "ddl,tables,04_billing"
+      comment: Creates table invoice.
+      changes:
+        - sqlFile:
+            path: 003-invoice.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/04_billing/003-invoice.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: b5b7b67a-4e87-477f-9db7-832ee1312b65
+      author: daniel2004-lsd
+      labels: "ddl,tables,04_billing"
+      comment: Creates table purchase_detail.
+      changes:
+        - sqlFile:
+            path: 004-purchase_detail.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/04_billing/004-purchase_detail.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false

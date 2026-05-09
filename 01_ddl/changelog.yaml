@@ -32,3 +32,6 @@ databaseChangeLog:
   - include:
       file: 10_schema_assignments/changelog.yaml
       relativeToChangelogFile: true
+  - include:
+      file: 04_constraints/changelog.yaml
+      relativeToChangelogFile: true

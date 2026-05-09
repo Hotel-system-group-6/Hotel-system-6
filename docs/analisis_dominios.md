@@ -10,7 +10,7 @@ La documentacion se mantiene en espanol para facilitar el seguimiento del proyec
 
 Del modelo salen 8 modulos funcionales. Para que el modelo fisico coincida con el analisis aprobado, cada modulo funcional tiene un schema PostgreSQL propio.
 
-Las carpetas de migracion pueden seguir agrupadas por cercania tecnica, pero la asignacion final de tablas en PostgreSQL se hace por los 8 schemas funcionales.
+Las carpetas de migracion quedan organizadas por los 8 modulos funcionales y la asignacion final de tablas en PostgreSQL se hace por los 8 schemas funcionales.
 
 ## Modulos funcionales
 
@@ -27,19 +27,20 @@ Las carpetas de migracion pueden seguir agrupadas por cercania tecnica, pero la 
 
 ## Carpetas de migracion
 
-El DDL de tablas esta organizado en `01_ddl/03_tables`, con una carpeta por dominio. Cada tabla tiene su propio archivo SQL con formato `001-table_name.sql`.
+El DDL de tablas esta organizado en `01_ddl/03_tables`, con una carpeta por modulo funcional. Cada tabla tiene su propio archivo SQL con formato `001-table_name.sql`.
 
 | Carpeta | Responsabilidad | Tablas |
 | --- | --- | --- |
-| `01_identity_security` | Entidades de cliente, persona, usuario, roles, permisos, modulos y pantallas. | `customer`, `person`, `app_role`, `permission`, `module`, `screen`, `app_user`, `app_user_role`, `role_permission`, `module_screen` |
-| `02_company_operations` | Empresa, informacion legal, empleados y sedes. | `company`, `legal_information`, `employee`, `branch` |
-| `03_rooms_reservations` | Habitaciones, disponibilidad, precios, reservas, estadias, check-in y check-out. | `day_type`, `room_type`, `room_status`, `room`, `price`, `room_reservation`, `room_cancellation`, `room_availability`, `room_catalog`, `stay`, `check_in`, `check_out` |
-| `04_inventory_services` | Proveedores, productos, servicios, seguimiento e inventario. | `supplier`, `product`, `service`, `product_tracking`, `inventory_availability` |
-| `05_billing_payments` | Ventas, prefacturas, facturas, pagos y detalles de compra. | `payment_method`, `product_sale`, `service_sale`, `pre_invoice`, `invoice`, `partial_payment`, `purchase_detail` |
-| `06_communication_loyalty` | Promociones, alertas, terminos y fidelizacion. | `promotion`, `alert`, `terms_condition`, `customer_loyalty` |
-| `07_maintenance` | Mantenimiento, uso, remodelacion y tablero operativo. | `room_maintenance`, `maintenance_usage`, `maintenance_remodeling`, `maintenance_dashboard` |
+| `01_parameterization` | Parametrizacion. | `customer`, `price`, `company`, `legal_information`, `employee`, `day_type`, `payment_method` |
+| `02_distribution` | Distribucion. | `branch`, `room`, `room_type`, `room_status` |
+| `03_service_delivery` | Prestacion de servicio. | `room_catalog`, `room_availability`, `room_reservation`, `room_cancellation`, `check_in`, `check_out`, `stay`, `product_sale`, `service_sale` |
+| `04_billing` | Facturacion. | `pre_invoice`, `partial_payment`, `invoice`, `purchase_detail` |
+| `05_inventory` | Inventario. | `product`, `service`, `supplier`, `product_tracking`, `inventory_availability` |
+| `06_notification` | Notificacion. | `promotion`, `alert`, `terms_condition`, `customer_loyalty` |
+| `07_security` | Seguridad. | `person`, `app_user`, `app_role`, `permission`, `module`, `screen`, `app_user_role`, `role_permission`, `module_screen` |
+| `08_maintenance` | Mantenimiento. | `room_maintenance`, `maintenance_usage`, `maintenance_remodeling`, `maintenance_dashboard` |
 
-Estas carpetas son de organizacion de scripts. La ubicacion final en PostgreSQL se define en `01_ddl/10_schema_assignments`.
+Estas carpetas son de organizacion de scripts por modulo. La ubicacion final en PostgreSQL se define en `01_ddl/10_schema_assignments`.
 
 ## Orden de ejecucion
 
@@ -54,7 +55,7 @@ El orden de los dominios es intencional. Primero se crean las tablas base y lueg
 
 ## Registro en Liquibase
 
-El changelog principal de tablas es `01_ddl/03_tables/changelog.yaml`. Este archivo incluye un changelog por dominio. Cada changelog de dominio registra los scripts tabla por tabla y apunta a su rollback correspondiente en `05_rollbacks/01_ddl/03_tables`.
+El changelog principal de tablas es `01_ddl/03_tables/changelog.yaml`. Este archivo registra los scripts tabla por tabla en orden de dependencias, apuntando a los archivos ubicados en cada carpeta de modulo y a su rollback correspondiente en `05_rollbacks/01_ddl/03_tables`.
 
 Esta estructura permite cambios pequenos, ownership claro por dominio y rollbacks mas faciles de revisar.
 

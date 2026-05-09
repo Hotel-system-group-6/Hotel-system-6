@@ -1,0 +1,72 @@
+databaseChangeLog:
+  - changeSet:
+      id: a834662d-28dc-4450-8607-30421c55151b
+      author: daniel2004-lsd
+      labels: "ddl,tables,02_distribution"
+      comment: Creates table branch.
+      changes:
+        - sqlFile:
+            path: 001-branch.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/02_distribution/001-branch.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 8a1e0e61-a3cd-4acf-8746-4dc3277a6a2e
+      author: daniel2004-lsd
+      labels: "ddl,tables,02_distribution"
+      comment: Creates table room.
+      changes:
+        - sqlFile:
+            path: 002-room.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/02_distribution/002-room.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 69f7389a-ae66-44cb-97fa-23a40ad31405
+      author: daniel2004-lsd
+      labels: "ddl,tables,02_distribution"
+      comment: Creates table room_type.
+      changes:
+        - sqlFile:
+            path: 003-room_type.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/02_distribution/003-room_type.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: dc367df4-7c9f-4521-b0c6-ad71b808cb4e
+      author: daniel2004-lsd
+      labels: "ddl,tables,02_distribution"
+      comment: Creates table room_status.
+      changes:
+        - sqlFile:
+            path: 004-room_status.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/02_distribution/004-room_status.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false

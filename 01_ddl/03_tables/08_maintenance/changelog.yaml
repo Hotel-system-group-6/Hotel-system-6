@@ -1,0 +1,72 @@
+databaseChangeLog:
+  - changeSet:
+      id: 59237f82-5c6a-41d7-864e-568340ddb5a1
+      author: daniel2004-lsd
+      labels: "ddl,tables,08_maintenance"
+      comment: Creates table room_maintenance.
+      changes:
+        - sqlFile:
+            path: 001-room_maintenance.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/08_maintenance/001-room_maintenance.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: db10c6f1-76b1-4dc6-a3b4-8b6948385721
+      author: daniel2004-lsd
+      labels: "ddl,tables,08_maintenance"
+      comment: Creates table maintenance_usage.
+      changes:
+        - sqlFile:
+            path: 002-maintenance_usage.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/08_maintenance/002-maintenance_usage.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: c51dfd62-6ba3-45ef-9d5d-50b78f320460
+      author: daniel2004-lsd
+      labels: "ddl,tables,08_maintenance"
+      comment: Creates table maintenance_remodeling.
+      changes:
+        - sqlFile:
+            path: 003-maintenance_remodeling.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/08_maintenance/003-maintenance_remodeling.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 142a9185-695d-418e-a5a4-a5e3e6b2a74c
+      author: daniel2004-lsd
+      labels: "ddl,tables,08_maintenance"
+      comment: Creates table maintenance_dashboard.
+      changes:
+        - sqlFile:
+            path: 004-maintenance_dashboard.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/08_maintenance/004-maintenance_dashboard.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false

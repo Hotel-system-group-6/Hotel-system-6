@@ -1,0 +1,126 @@
+databaseChangeLog:
+  - changeSet:
+      id: c455eac7-a7c1-4686-b725-065ac97143e7
+      author: daniel2004-lsd
+      labels: "ddl,tables,01_parameterization"
+      comment: Creates table customer.
+      changes:
+        - sqlFile:
+            path: 001-customer.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/001-customer.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: ef3e277b-3815-4a15-9667-853fca7962d0
+      author: daniel2004-lsd
+      labels: "ddl,tables,01_parameterization"
+      comment: Creates table price.
+      changes:
+        - sqlFile:
+            path: 002-price.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/002-price.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: e1a6420b-0623-4b6a-b8ee-a325140da658
+      author: daniel2004-lsd
+      labels: "ddl,tables,01_parameterization"
+      comment: Creates table company.
+      changes:
+        - sqlFile:
+            path: 003-company.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/003-company.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 85e1e93d-977f-443a-8f9f-3da4ac0610e0
+      author: daniel2004-lsd
+      labels: "ddl,tables,01_parameterization"
+      comment: Creates table legal_information.
+      changes:
+        - sqlFile:
+            path: 004-legal_information.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/004-legal_information.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 0f04f253-0c08-48ba-9d91-77cc4eb0093d
+      author: daniel2004-lsd
+      labels: "ddl,tables,01_parameterization"
+      comment: Creates table employee.
+      changes:
+        - sqlFile:
+            path: 005-employee.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/005-employee.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 4d21842f-6c11-4854-8de6-b8f870cadc79
+      author: daniel2004-lsd
+      labels: "ddl,tables,01_parameterization"
+      comment: Creates table day_type.
+      changes:
+        - sqlFile:
+            path: 006-day_type.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/006-day_type.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 4f908e44-5455-4502-8cd0-a3f89afadf11
+      author: daniel2004-lsd
+      labels: "ddl,tables,01_parameterization"
+      comment: Creates table payment_method.
+      changes:
+        - sqlFile:
+            path: 007-payment_method.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/01_parameterization/007-payment_method.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
