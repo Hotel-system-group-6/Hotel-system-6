@@ -13,8 +13,7 @@ CREATE TABLE legal_information (
   deleted_by UUID NULL,
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
-  PRIMARY KEY (id),
-
+  PRIMARY KEY (id)
 );
 
 CREATE INDEX ix_legal_information_company ON legal_information (company_id);

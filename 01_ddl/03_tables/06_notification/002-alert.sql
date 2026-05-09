@@ -13,8 +13,7 @@ CREATE TABLE alert (
   deleted_by UUID NULL,
   deleted_at TIMESTAMPTZ NULL,
   status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
-  PRIMARY KEY (id),
-
+  PRIMARY KEY (id)
 );
 
 CREATE INDEX ix_alert_customer ON alert (customer_id);

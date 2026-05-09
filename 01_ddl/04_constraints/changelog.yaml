@@ -13,7 +13,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/001_price.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/001_price.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -31,7 +31,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/002_legal_information.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/002_legal_information.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -49,7 +49,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/003_employee.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/003_employee.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -67,7 +67,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/004_branch.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/004_branch.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -85,7 +85,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/005_room.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/005_room.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -103,7 +103,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/006_room_catalog.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/006_room_catalog.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -121,7 +121,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/007_room_availability.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/007_room_availability.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -139,7 +139,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/008_room_reservation.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/008_room_reservation.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -157,7 +157,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/009_room_cancellation.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/009_room_cancellation.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -175,7 +175,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/010_check_in.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/010_check_in.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -193,7 +193,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/011_check_out.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/011_check_out.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -211,7 +211,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/012_stay.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/012_stay.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -229,7 +229,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/013_product_sale.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/013_product_sale.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -247,7 +247,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/014_service_sale.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/014_service_sale.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -265,7 +265,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/015_pre_invoice.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/015_pre_invoice.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -283,7 +283,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/016_partial_payment.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/016_partial_payment.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -301,7 +301,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/017_invoice.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/017_invoice.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -319,7 +319,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/018_purchase_detail.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/018_purchase_detail.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -337,7 +337,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/019_product.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/019_product.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -355,7 +355,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/020_product_tracking.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/020_product_tracking.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -373,7 +373,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/021_inventory_availability.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/021_inventory_availability.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -391,7 +391,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/022_room_maintenance.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/022_room_maintenance.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -409,7 +409,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/023_maintenance_usage.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/023_maintenance_usage.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -427,7 +427,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/024_maintenance_remodeling.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/024_maintenance_remodeling.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -445,7 +445,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/025_maintenance_dashboard.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/025_maintenance_dashboard.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -463,7 +463,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/026_alert.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/026_alert.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -481,7 +481,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/027_customer_loyalty.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/027_customer_loyalty.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -499,7 +499,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/028_app_user.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/028_app_user.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -517,7 +517,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/029_screen.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/029_screen.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -535,7 +535,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/030_app_user_role.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/030_app_user_role.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -553,7 +553,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/031_role_permission.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/031_role_permission.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
@@ -571,7 +571,7 @@ databaseChangeLog:
             stripComments: false
       rollback:
         - sqlFile:
-            path: ../../../05_rollbacks/01_ddl/04_constraints/032_module_screen.rollback.sql
+            path: ../../05_rollbacks/01_ddl/04_constraints/032_module_screen.rollback.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: false
