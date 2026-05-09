@@ -61,6 +61,7 @@ La carpeta se ejecuta después de la creación de schemas y tablas, porque depen
 - Los rollbacks son más simples, porque pueden eliminar constraints sin recrear tablas.
 - La revisión del modelo relacional es más clara: las llaves foráneas están centralizadas en una etapa específica.
 - Se evita modificar scripts históricos de tablas cuando se agregan o corrigen relaciones.
+- Las relaciones obligatorias protegen el borrado físico de entidades maestras mediante `ON DELETE RESTRICT` explícito.
 
 ### Negativas
 
@@ -76,6 +77,8 @@ La carpeta se ejecuta después de la creación de schemas y tablas, porque depen
 - Los scripts de `04_constraints` deben enfocarse en constraints agregadas con `ALTER TABLE`.
 - Cada archivo debe agrupar las constraints de una sola tabla siempre que sea posible.
 - Los nombres de constraints deben ser explícitos y descriptivos, usando el prefijo `fk_` para llaves foráneas.
+- Las llaves foráneas obligatorias deben declarar `ON DELETE RESTRICT` de forma explícita.
+- `ON DELETE SET NULL` solo debe usarse cuando la relación sea opcional y la columna FK permita valores `NULL`.
 - Todo changeSet de constraints debe tener rollback equivalente con `DROP CONSTRAINT`.
 - No se deben crear tablas, datos semilla, índices, funciones, triggers ni permisos en esta carpeta.
 - Si una relación cruza schemas, la referencia debe quedar alineada con la estrategia definida en los ADR de schemas.

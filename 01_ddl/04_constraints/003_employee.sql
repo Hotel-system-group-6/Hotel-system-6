@@ -1,3 +1,3 @@
 -- PARAMETERIZATION: employee
 ALTER TABLE employee
-ADD CONSTRAINT fk_employee_person FOREIGN KEY (person_id) REFERENCES person (id);
+ADD CONSTRAINT fk_employee_person FOREIGN KEY (person_id) REFERENCES person (id) ON DELETE RESTRICT;
